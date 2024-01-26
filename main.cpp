@@ -10,12 +10,13 @@ int main() {
     string day;
     string weekDay, weekend;
     double cost;
+    char temp; 
 
     double callLength;
 
 
-   cout << "please enter the time in the 24 hour format with time and minutes seperated by a space" << endl;
-   cin >> hour >> mins;
+   cout << "please enter the time in the 24 hour format" << endl;
+   cin >> hour >>temp >> mins;
 
    cout << "please enter the date in the format (Mo Tu We Th Fr Sa Su) " << endl;
    cin >> day;
