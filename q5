@@ -1,1 +1,56 @@
+#include <iostream>
+#include <string>
+
+using namespace std;
+
+
+double weightPounds, heightInches;
+double weightKilo, heightMeters;
+
+double BMIrange;
+
+string weightStatus;
+
+int main() {
+
+   cout << "Please enter weight in pounds" << endl;
+   cin >> weightPounds;
+
+   cout << "Please enter height in inches" << endl;
+   cin >> heightInches;
+
+   weightKilo = weightPounds * 0.453592;
+   heightMeters = heightInches * 0.0254;
+
+   BMIrange = weightKilo / (heightMeters * heightMeters) ;
+
+   if (BMIrange < 18.5){
+
+       weightStatus = " underweight " ;
+
+   }
+   else if (BMIrange >= 18.5 && BMIrange < 25){
+
+       weightStatus = " Normal " ;
+
+   }
+
+   else if (BMIrange >= 25 && BMIrange < 30){
+
+       weightStatus = " Overweight ";
+
+   }
+   else {
+
+       weightStatus = " Obese ";
+
+   }
+
+    cout << "Your weight in pounds is " << weightPounds << endl;
+    cout << "Your height in inches is " << heightInches << endl;
+    cout << "The weight status is "  << weightStatus << endl;
+
+
+    return 0;
+}
 
